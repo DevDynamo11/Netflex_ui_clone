@@ -3,12 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  overflow-x: hidden;
+}
 body {
   position: relative;
   background-color: black;
 }
 .border{
-  width: 100vw;
+  width: 100%;
   position: fixed;
   height: 50px;
   top: 0;
@@ -30,7 +33,7 @@ body {
   background-image: url("assest/bg.jpg");
   height: 80vh;
   overflow: hidden;
-  background-size: max(1200px, 100vw);
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -135,7 +138,7 @@ body {
 .seperation {
   overflow:hidden;
   height: 4px;
-  background-color: #f12424;
+  background-color: #ff000084;
   border-top: none;
   border-radius: 100%;
   box-shadow: 0px 10px 30px 3px rgb(111, 111, 227);
@@ -265,5 +268,85 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+}
+ .faq{
+  margin: 5rem auto;
+  background-color: black;
+  width: 60%;
+  gap: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+ }
+ .faq h2{
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem ;
+ }
+.faq-box{
+  width: 80%;
+  height: 60px;
+ background-color: #423d3d;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ border-radius: 6px;
+ cursor: pointer;
+ tran: all 0.2s linear;
+}
+.faq-box:hover{
+  background-color: #f3212b;
+}
+.faq-box span{
+  font-size: 1.2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: white;
+  padding-left: 1rem;
+}
+.faq-box svg{
+  padding-right: 1rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.email-end{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   margin-bottom: 4rem;
+}
+.email-end p{
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+}
+
+.footer_grid{
+  margin: 2rem auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  color: #fcffff;
+  justify-items: center;
+}
+.footer_grid_column{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+.footer_grid_column li{
+  padding: 0.5rem;
+  list-style-type: none;
+  font-size:0.9rem;
+}
+.footer_grid_column a{
+    text-decoration: none;
+    color: #979e9e;
 }
