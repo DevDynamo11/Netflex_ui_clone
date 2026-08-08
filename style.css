@@ -223,7 +223,7 @@ body {
   position: relative;
   object-fit: contain;
   width: 450px;
-  top: 5.5rem;
+  top: 6.8rem;
 }
 .down_arrow {
   display: none;
@@ -462,7 +462,7 @@ body {
     width: 480px;
   }
   .tv-image video {
-    top: 4rem;
+    top: 6.7rem;
     width: 350px;
   }
   .tv-text .p1 {
@@ -528,7 +528,7 @@ body {
     margin-top: 2rem;
   }
   .tv-image video {
-    top: 3rem;
+    top: 5.5rem;
     width: 250px;
   }
    .faq-box span{
