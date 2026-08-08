@@ -3,42 +3,54 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   overflow-x: hidden;
 }
 body {
   position: relative;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
-.border{
+.border {
   width: 100%;
   position: fixed;
   height: 50px;
-  top: 0;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   color: #f9fcfc;
   font-weight: bold;
-  background: var(--offer, linear-gradient(90deg, var(--Violet-violet-600, #5c32bf) 0%, var(--Violet-violet-600, #5c32bf) 20%, var(--Red-red-500, #e50914) 100%));
+  background: var(
+    --offer,
+    linear-gradient(
+      90deg,
+      var(--Violet-violet-600, #5c32bf) 0%,
+      var(--Violet-violet-600, #5c32bf) 20%,
+      var(--Red-red-500, #e50914) 100%
+    )
+  );
+  z-index: 100;
 }
-.top{
-  z-index: -10;
-  top:50px;
+.top {
+  width: 100%;
+  top: 50px;
   position: relative;
 }
 .main {
+  max-width: 100%;
   position: relative;
   background-image: url("assest/bg.jpg");
   height: 80vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
 }
 .box {
+  max-width: 100%;
+  overflow: hidden;
   position: absolute;
   top: 0;
   height: 80vh;
@@ -49,16 +61,17 @@ body {
 
 .logo-img {
   color: red;
-  width: 180px;
+  width: 150px;
   z-index: 10;
 }
 .nav-bar {
+  max-width: 100%;
   position: relative;
-  max-width: 60vw;
+  overflow: hidden;
   margin: auto;
   display: flex;
   padding-top: 1.5rem;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 62px;
 }
@@ -66,9 +79,10 @@ body {
 .button-bar {
   z-index: 10;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 .hero {
+  width: 100%;
   padding: 23px;
   text-align: center;
   height: calc(100% - 62px);
@@ -78,23 +92,30 @@ body {
   align-items: center;
   gap: 1.6rem;
   color: white;
-  overflow:hidden;
   position: relative;
   z-index: 10;
 }
 .hero h2 {
-  max-width: 50%;
+  width: 50%;
   font-size: 3.5rem;
 }
-.hero p {
+.pp1 {
   color: #fdffff;
   font-size: 1.2rem;
+  font-weight: 600;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.pp2 {
+  width: 50%;
+  font-size: 1.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .email-box {
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
 }
 .email-box input {
   height: 3.5rem;
@@ -125,7 +146,7 @@ body {
 .button-red {
   text-align: center;
   width: 12rem;
-  height: 3rem;
+  height: 3.5rem;
   color: white;
   font-weight: 700;
   font-size: 1rem;
@@ -136,24 +157,23 @@ body {
 }
 
 .seperation {
-  overflow:hidden;
+  overflow-x: hidden;
   height: 4px;
-  background-color: #ff000084;
+  background-color: #ef1f1f;
   border-top: none;
   border-radius: 100%;
   box-shadow: 0px 10px 30px 3px rgb(111, 111, 227);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .red-button {
   text-align: center;
   background-color: rgb(245, 36, 36);
-  width: 6.2rem;
+  width: 6rem;
   height: 2.1rem;
   border: none;
   border-radius: 5px;
   color: white;
-  font-weight: 700;
 }
 
 .white-button {
@@ -175,15 +195,15 @@ body {
 }
 
 .first {
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  height: 60vh;
+  height: 65vh;
 }
 
 .tv-image {
-  
   position: relative;
   bottom: 8rem;
   display: flex;
@@ -192,22 +212,27 @@ body {
   justify-content: center;
 }
 .tv-image img {
+  margin-top: 2rem;
+  width: 580px;
   position: absolute;
   z-index: 10;
   overflow: hidden;
 }
 .tv-image video {
-  overflow:hidden;
+  overflow: hidden;
   position: relative;
   object-fit: contain;
-  width: 96%;
-  top: 6rem;
+  width: 450px;
+  top: 5.5rem;
+}
+.down_arrow {
+  display: none;
 }
 
 .tv-text {
   display: flex;
   flex-direction: column;
-  max-width: 30vw;
+  width: 30vw;
   gap: 2rem;
   text-align: center;
   color: azure;
@@ -223,7 +248,8 @@ body {
 }
 
 .second {
-  overflow:hidden;
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,7 +257,8 @@ body {
   overflow: hidden;
 }
 .third {
-  overflow:hidden;
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,30 +266,31 @@ body {
   height: 60vh;
 }
 .device-image {
-  
   position: relative;
-  bottom:7rem;
+  bottom: 7rem;
   display: flex;
   align-self: center;
   justify-content: center;
 }
 
 .device-image img {
-  overflow:hidden;
+  width: 600px;
+  overflow: hidden;
   position: absolute;
   z-index: 10;
   overflow: hidden;
 }
 .device-image video {
-  overflow:hidden;
+  overflow: hidden;
   position: relative;
   object-fit: contain;
-  width: 83%;
+  width: 400px;
   top: 3.5rem;
 }
 
-.forth{
-  overflow:hidden;
+.forth {
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -270,7 +298,8 @@ body {
   gap: 5rem;
   margin-bottom: 4rem;
 }
- .faq{
+.faq {
+  width: 100%;
   margin: 5rem auto;
   background-color: black;
   width: 60%;
@@ -279,74 +308,230 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
- }
- .faq h2{
+}
+.faq h2 {
   font-size: 2.5rem;
   color: white;
   text-align: center;
-  margin-bottom: 1rem ;
- }
-.faq-box{
+  margin-bottom: 1rem;
+}
+.faq-box {
   width: 80%;
   height: 60px;
- background-color: #423d3d;
- display: flex;
- align-items: center;
- justify-content: space-between;
- border-radius: 6px;
- cursor: pointer;
- tran: all 0.2s linear;
+  background-color: #423d3d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
-.faq-box:hover{
+.faq-box:hover {
   background-color: #f3212b;
 }
-.faq-box span{
+.faq-box span {
   font-size: 1.2rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   color: white;
   padding-left: 1rem;
 }
-.faq-box svg{
+.faq-box svg {
   padding-right: 1rem;
   width: 2.8rem;
   height: 2.8rem;
 }
 
-.email-end{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 2rem;
-   margin-bottom: 4rem;
+.email-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
-.email-end p{
+.email-end p {
+  width: 90%;
   color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 1.1rem;
 }
-
-.footer_grid{
-  margin: 2rem auto;
+.footer1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer_grid {
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   color: #fcffff;
   justify-items: center;
 }
-.footer_grid_column{
+.footer_grid_column {
   display: flex;
   gap: 1rem;
   flex-direction: column;
   font-size: 1.1rem;
 }
-.footer_grid_column li{
-  padding: 0.5rem;
+.footer_grid_column li {
+  padding-bottom: 0.5rem;
   list-style-type: none;
-  font-size:0.9rem;
+  font-size: 0.9rem;
 }
-.footer_grid_column a{
-    text-decoration: none;
-    color: #979e9e;
+.a1{
+  padding-left: 0.8rem;
+}
+.footer_grid_column a {
+  text-decoration: none;
+  color: #979e9e;
+}
+
+@media screen and (max-width: 1080px) {
+  .first {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 80vh;
+  }
+  .faq-box{
+    width: 70vw;
+  }
+  .tv-text {
+    width: 70%;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  .second {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .third {
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .forth {
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+  }
+  .phone-img {
+    padding-bottom: 5rem;
+  }
+  .hero h2 {
+    width: 80%;
+    font-size: 2.8rem;
+  }
+  .email-box input {
+    width: 18rem;
+  }
+  .button-red {
+    width: 8rem;
+  }
+}
+@media screen and (max-width: 652px) {
+  .faq-box span{
+    font-size: 1.1rem;
+  }
+  .faq-box{
+    width: 75vw;
+  }
+  .first {
+    height: 65vh;
+  }
+  .pp1 {
+    font-size: 1rem;
+  }
+  .pp2 {
+    font-size: 0.9rem;
+  }
+  .hero h2 {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .nav-bar {
+    width: 96%;
+    gap: 4rem;
+  }
+  .email-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tv-image img {
+    width: 480px;
+  }
+  .tv-image video {
+    top: 4rem;
+    width: 350px;
+  }
+  .tv-text .p1 {
+    font-size: 2.3rem;
+  }
+  .second img {
+    width: 420px;
+  }
+  .third {
+    height: 55vh;
+  }
+  .third-txt {
+    padding-bottom: 0;
+  }
+  .device-image img {
+    top: 2rem;
+    width: 380px;
+  }
+  .device-image video {
+    width: 250px;
+  }
+  .forth img {
+    width: 400px;
+  }
+  .footer_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .faq-box{
+    width: 85vw;
+  }
+  .logo-img {
+    width: 120px;
+  }
+  .white-button {
+    background-color: #423d3dd0;
+    opacity: 0.8;
+    width: 3.5rem;
+  }
+  .astrike {
+    filter: invert(1);
+  }
+
+  select {
+    display: none;
+  }
+  .down_arrow {
+    padding-left: 0.3rem;
+    display: block;
+    filter: invert(1);
+  }
+  .red-button {
+    width: 4.5rem;
+  }
+  .nav-bar {
+    width: 100%;
+    gap: 4rem;
+  }
+  .tv-image img {
+    width: 350px;
+    margin-top: 2rem;
+  }
+  .tv-image video {
+    top: 3rem;
+    width: 250px;
+  }
+   .faq-box span{
+    font-size: 0.9rem;
+  }
 }
